@@ -19,9 +19,10 @@
                 <li><a href="#">Programs</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Campuses</a></li>
-                <li><a href="#">Blog</a></li>
+                <li <?php if (get_post_type() == 'post') {echo 'class="current-menu-item"';} ?>><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
             </ul>
             </nav>
+            
             <div class="site-header__util">
             <a href="#" class="btn btn--small btn--orange float-left push-right">Login</a>
             <a href="#" class="btn btn--small  btn--dark-orange float-left">Sign Up</a>
